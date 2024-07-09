@@ -1,12 +1,12 @@
-# Personality Prediction System Based On Graphological Features
+# Personality Prediction System Based On Handwriting Features
 
 The project aims to develop a system for predicting human personality traits based on handwriting analysis. It leverages graphological analysis techniques and machine learning algorithms to extract meaningful features from handwriting samples and accurately predict personality traits.
 
-The system incorporates image processing methods to analyze and extract relevant graphological features from the handwriting samples, enhancing efficiency and reducing errors in personality trait prediction.
+The system incorporates image processing methods to analyze and extract relevant graphological features from the handwriting samples, enhancing efficiency and reducing errors in personality trait prediction. The machine algorithm used here is HistGradientBoostingRegressor to reduce the null value errors.
 
 A user-friendly web application has been developed to provide an intuitive interface for users to input their handwriting samples and receive personality trait predictions. The web application ensures easy accessibility and convenience, eliminating the need for specialized software or technical expertise.
 
-The project's GitHub repository can be found at: [https://github.com/afzalap/PersonalityPredictorAI](https://github.com/afzalap/PersonalityPredictorAI)
+The project's GitHub repository can be found at: [https://github.com/smitshah02/Identifying-Personality-Through-Handwriting-with-ML](https://github.com/smitshah02/Identifying-Personality-Through-Handwriting-with-ML)
 
 ## Table of Contents
 
@@ -22,13 +22,13 @@ The project's GitHub repository can be found at: [https://github.com/afzalap/Per
 
 The project is organized into two main directories:
 
-1. DjangoPredictor:
+1. DjangoPredcitor:
    - This directory contains the Django web application for personality prediction. It provides a user-friendly interface for users to input their handwriting samples and receive personality trait predictions. It handles the communication with the backend models and displays the results to the user.
 
-2. personalityPrection:
+2. PersonalityPrediction:
    - This directory is dedicated to feature extraction and model building. It includes scripts and modules for extracting relevant graphological features from handwriting samples and training machine learning models for personality prediction. It performs the necessary data preprocessing, feature engineering, and model training steps.
 
-The project structure is designed to separate the web application (DjangoPredictor) from the feature extraction and model building (personalityPrection). This modular organization allows for easier maintenance, scalability, and future improvements.
+The project structure is designed to separate the web application (DjangoPredcitor) from the feature extraction and model building (PersonalityPrediction). This modular organization allows for easier maintenance, scalability, and future improvements.
 
 Feel free to explore the respective directories to understand the implementation details and make any necessary modifications based on your specific requirements.
 
@@ -93,10 +93,4 @@ The input to the web App and the samples in the personalityPrection/data should 
 
 
 https://github.com/afzalap/PersonalityPredictorAI/assets/68552769/7af75fc0-0c87-46d4-9237-3594c8258061
-
-
-
-## License
-
-[MIT License](LICENSE)
 
