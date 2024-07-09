@@ -38,8 +38,6 @@ The dataset used for training and evaluation consists of a total of 1839 samples
 
 - 1539 samples of 657 were taken from the IAM Handwriting Dataset (http://www.fki.inf.unibe.ch/databases/iam-handwriting-database) which provides a diverse collection of handwritten documents.
 
-- Additional 300 samples were collected from 100 writers who volunteered from friends and family.
-
 ## Installation
 
 To install the necessary packages, run the following command:
@@ -91,6 +89,10 @@ The input to the web App and the samples in the PersonalityPrediction/data shoul
 ![Krisha](https://github.com/smitshah02/Identifying-Personality-Through-Handwriting-with-ML/assets/60495346/2858d728-c686-4a08-9014-f6d24f4d00e8)
 
 ## Demo
+
+
+
+https://github.com/smitshah02/Identifying-Personality-Through-Handwriting-with-ML/assets/60495346/2324f6ae-acb7-4ede-aa67-44663716a750
 
 
 
