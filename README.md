@@ -16,7 +16,6 @@ The project's GitHub repository can be found at: [https://github.com/smitshah02/
 - [Usage](#usage)
 - [Data Preparation](#data-preparation)
 - [Demo](#demo)
-- [License](#license)
 
 ## Project Structure
 
