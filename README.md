@@ -1,4 +1,4 @@
-# Personality Prediction System Based On Handwriting Features
+# Personality Prediction System Based On Handwriting Features using HistGradientBoosting Regressor
 
 The project aims to develop a system for predicting human personality traits based on handwriting analysis. It leverages graphological analysis techniques and machine learning algorithms to extract meaningful features from handwriting samples and accurately predict personality traits.
 
