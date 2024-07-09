@@ -1,0 +1,110 @@
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.start-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.container form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.container form .form-group {
+  margin-bottom: 20px;
+}
+
+.container form label {
+  font-weight: bold;
+}
+
+.container form input[type="text"],
+.container form input[type="file"],
+.container form input[type="checkbox"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.container form .disclaimer {
+  margin-top: 10px;
+}
+
+.container form button[type="submit"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.container form button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.identify-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.identify-button a {
+  color: white;
+}
+
+.next-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.next-button a {
+  color: white;
+}
+
+.loading {
+  margin-top: 20px; /* Space between the form and the loading widget */
+  z-index: 1000; /* High z-index to make it on top of other elements if needed */
+  text-align: center;
+  padding: 10px; /* Reduced padding to make the widget smaller */
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border-radius: 5px; /* Reduced border-radius for a smaller widget */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); /* Adjusted box-shadow for a smaller size */
+}
+
+.loading img {
+  width: 20px; /* Smaller image width */
+  height: 20px; /* Smaller image height */
+  margin-bottom: 5px; /* Adjusted bottom margin */
+}
