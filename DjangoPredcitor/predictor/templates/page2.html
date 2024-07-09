@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Information</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif; 
+      background-image: url('{% static "predictor/background.jpg" %}');
+      background-size: cover;
+      background-position: center;
+
+    }
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="file"],
+    input[type="checkbox"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    input[type="file"] {
+      cursor: pointer;
+    }
+    .disclaimer {
+      margin-top: 10px;
+      font-style: italic;
+      color: red;
+    }
+    .wait {
+      margin-top: 5px;
+      font-style: italic;
+      color: black;
+    }
+    button[type="submit"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4caf50;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>User Information</h1>
+    <form action="{% url 'predict' %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="username">Enter your name:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="image">Upload Image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+      </div>
+      <div class="disclaimer">
+        Disclaimer: Handwritten Text should be written on Plain Paper, image should be cropped and then uploaded!
+      </div><br>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="loadingImage" style="display: none; text-align:center;">
+      <img src="{% static 'predictor/loading.PNG' %}" alt="Loading" style="max-width: 100%; height: 100px">
+    </div>
+    <div id="please" style="display: none; text-align:center; margin-top: 5px;font-style: italic; color: black;">
+        <p>Please wait while your handwriting is being analyzed!</p>
+    </div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var form = document.querySelector('form');
+    form.onsubmit = function() {
+      document.getElementById('loadingImage').style.display = 'block';
+      document.getElementById('please').style.display = 'block';
+    };
+  });
+</script>
+
+</body>
+</html>

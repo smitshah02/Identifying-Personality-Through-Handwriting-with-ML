@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personality Prediction</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap">
+    <style>
+
+        body {
+
+            font-family: "Kanit", sans-serif;
+            background-color: #1f1f1f;
+            color: #fff;
+            background-image: url('{% static "my_app/background.JPG" %}'); /* Update the image path to the exact file name and extension */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0; /* Reset default margin */
+        }
+        
+        .start-button {
+            position: fixed; /* Fixed position to stay in the same place even if the page scrolls */
+            right: 20px;
+            bottom: 20px;
+            background-color: #F4EDED;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* Remove underline from links */
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        .start-button:hover {
+            background-color: #3e8e41;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personality Prediction</h1>
+    <!-- The link should lead to the next page you wish to navigate to, replace 'nextpage.html' accordingly -->
+    <a href="nextpage.html" class="start-button">Start</a>
+</body>
+</html>

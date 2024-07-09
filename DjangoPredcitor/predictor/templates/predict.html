@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predictions</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: "Kanit", sans-serif;
+            background-image: url('{% static "predictor/lastpage.png" %}');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        h1 {
+            margin-top: 50px;
+            color: #000;
+        }
+
+        .prediction-image {
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-width: 50%;
+        }
+
+        .predictions-text {
+            margin: 20px auto;
+            max-width: 700px;
+            text-align: middle;
+        }
+
+        .prediction-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Handwriting Analysis</h1>
+    <h3>Hello, {{ username }}! This is what your handwriting says about you</h3>
+    <br>
+    <img src="{{ img_path }}" alt="Handwriting Sample" class="prediction-image">
+    
+    <div class="predictions-text">
+    
+        {% if qualitative_interpretations.Introversion %}
+        <p class="prediction-item">You show tendencies that you are {{ qualitative_interpretations.Introversion }}</p>
+        {% endif %}
+
+        {% if qualitative_interpretations.Emotional_Stability %}
+        <p class="prediction-item">You are {{ qualitative_interpretations.Emotional_Stability }}</p>
+        {% endif %}
+
+        {% if qualitative_interpretations.Neuroticism %}
+        <p class="prediction-item">Your neuroticism behaviour is {{ qualitative_interpretations.Neuroticism }}</p>
+        {% endif %}
+
+        {% if qualitative_interpretations.Openness_to_Experience %}
+        <p class="prediction-item">You are a {{ qualitative_interpretations.Openness_to_Experience }} person</p>
+        {% endif %}
+
+        {% if qualitative_interpretations.Conscientiousness %}
+        <p class="prediction-item">You are a {{ qualitative_interpretations.Conscientiousness }} person</p>
+        {% endif %}
+
+        {% if qualitative_interpretations.Agreeableness %}
+        <p class="prediction-item">Your nature is {{ qualitative_interpretations.Agreeableness }}</p>
+        {% endif %}
+
+        <br>
+        <br>
+
+
+        <h3>Each stroke and spacing in your handwriting offers a glimpse into your personality:</h3>
+        <br>
+        {% for feature, trait in traits_img_processing.items %}
+        <p class="prediction-item">{{ feature }} in your handwriting hints at {{ trait }}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
