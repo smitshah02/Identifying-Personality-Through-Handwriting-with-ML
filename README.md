@@ -69,10 +69,10 @@ To install the necessary packages, run the following command:
   python3 gen_final_data.py
   ```
   
-- Run train_models.py to train the models using the labeled dataset. The trained models can be used in the DjangoPredictor or you can change the path for saving the models to the DjangoPredictor/models directory.
+- Run train.py to train the models using the labeled dataset. The trained models can be used in the DjangoPredictor or you can change the path for saving the models to the DjangoPredictor/models directory.
 
   ```
-  python3 train_models.py
+  python3 train.py
   ```
   
 - Start the Django server in the DjangoPredictor directory to use the system.
